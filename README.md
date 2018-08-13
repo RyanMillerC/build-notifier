@@ -18,7 +18,8 @@ Using automated deployments, we deploy all Pull Requests to an S3 bucket in a fo
 
 2. Create the file, `.github/build-notifier.yml`, in your repo.
 
-3. Copy the contents of `sample/build-notifier.yml` from this repo into the new file from step #2, replacing `deploymentURL` and `notifyMessage` with a URL and message for your app.
+3. Copy the contents of `sample/build-notifier.yml` from this repo into the new file from step #2.
+    - Replace `deploymentURL` and `notifyMessage` with a URL and message for your app.
 
 That's it! You can confirm it's working by creating a pull request and waiting a moment for the bot to comment.
 
