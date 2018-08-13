@@ -1,6 +1,6 @@
 # build-notifier
 
-> A GitHub App built with [Probot](https://github.com/probot/probot) that will comment on new pull requests with a compiled link that that build
+> A GitHub App built with [Probot](https://github.com/probot/probot) that comments on new pull requests with a link to the compiled PR
 
 ## Setup
 
