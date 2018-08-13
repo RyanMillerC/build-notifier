@@ -11,7 +11,7 @@ module.exports = app => {
       number: issueNumber
     })
     const branchName = pullRequest.data.head.ref
-    const buildURL = s3BucketURL + '/' + branchName
+    const buildURL = deploymentURL + '/' + branchName
     const prComment = context.issue({
       body: notifyMessage.replace('{{LINK}}', buildURL)
     })
