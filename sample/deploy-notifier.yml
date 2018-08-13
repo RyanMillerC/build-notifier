@@ -1,0 +1,12 @@
+# Base Deployment URL
+#
+# NOTE: Make sure not leave a trailing slash
+#
+deploymentURL: http://my-app.s3-website-us-east-1.amazonaws.com
+
+# Message to notify user
+#
+# {{LINK}} will be replaced with a link to the build (deploymentURL + Branch Name)
+#
+notifyMessage: "PR build will be deployed [here]({{LINK}})."
+
