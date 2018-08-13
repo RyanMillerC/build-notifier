@@ -1,7 +1,7 @@
 {
   "name": "build-notifier",
   "version": "1.0.0",
-  "description": "Comment on Pull Requests with Link to Compiled Build",
+  "description": "A GitHub App built with Probot that will comment on new pull requests with a compiled link that that build",
   "author": "Ryan Miller <ryan@devopsmachine.com>",
   "license": "ISC",
   "repository": "https://github.com/RyanMillerC/build-notifier.git",
@@ -16,6 +16,7 @@
     "dev": "nodemon",
     "start": "probot run ./index.js",
     "lint": "standard --fix",
+    "now-start": "PRIVATE_KEY=$(echo $PRIVATE_KEY_BASE64 | base64 -d) npm start",
     "test": "jest && standard",
     "test:watch": "jest --watch --notify --notifyMode=change --coverage"
   },
