@@ -2,6 +2,8 @@
 
 > A GitHub App built with [Probot](https://github.com/probot/probot) that comments on new pull requests with a link to the compiled PR. It is available [here](https://github.com/apps/build-notifier).
 
+![Screenshot](https://ryanmillerc.github.io/build-notifier/screenshot.png)
+
 ## Use Case
 
 This bot can be used to notify users that a compiled React demo, built from the Pull Requests code-base, is available at the included URL.
