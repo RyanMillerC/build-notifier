@@ -6,7 +6,7 @@
 
 ## Use Case
 
-This bot can be used to notify users that a compiled React demo, built from the Pull Requests code-base, is available at the included URL.
+This bot can be used to notify users that a compiled React demo, built from a Pull Request code-base, is available at the included URL.
 
 ### How We Use This App
 
