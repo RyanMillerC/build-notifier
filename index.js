@@ -2,6 +2,7 @@ module.exports = app => {
   app.on('pull_request.opened', async context => {
     const config = await context.config(`deploy-notifier.yml`)
     const { deploymentURL, notifyMessage } = config || {}
+    
     const repoName = context.payload.repository.name
     const owner = context.payload.repository.owner.login
     const issueNumber = context.payload.number
@@ -15,6 +16,7 @@ module.exports = app => {
     const prComment = context.issue({
       body: notifyMessage.replace('{{LINK}}', buildURL)
     })
+    
     return context.github.issues.createComment(prComment)
   })
 }
