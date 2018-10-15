@@ -1,45 +1,36 @@
 # build-notifier :robot:
 
-> A GitHub App built with [Probot](https://github.com/probot/probot) that comments on new pull requests with a link to the compiled PR. It is available [here](https://github.com/apps/build-notifier).
+> GitHub bot to comment on new pull requests with a link to a live demo of the requested PR. It is available [here](https://github.com/apps/build-notifier).
 
 ![Screenshot](https://ryanmillerc.github.io/build-notifier/screenshot.png)
 
-## Use Case
+## Description
 
-This bot can be used to notify users that a compiled React demo, built from a Pull Request code-base, is available at the included URL.
+Build-notifier is a GitHub bot to comment on new pull requests. Bot will comment with a predefinded message including a URL to a build of the requested PR. This assumes that all PRs are being deployed to a specific URL under a resource name matching the PR branch name. For example, a link to, `http://devopsmachine.com/PRs/add-spacing-to-navbar`, would be added to the bot's comment on a PR to merge the branch, `add-spacing-to-navbar`, into master. In this example, `http://devopsmachine.com/PRs`, is where all builds are being deployed, each under a seperate resource suffix matching the branch name.
 
-### How We Use This App
+The notification message and deployment location are configured in, `.github/build-notifier.yml`, on the target repo. There are
+two values that must be set in the configuration file:
 
-Using automated deployments, we deploy all Pull Requests to an S3 bucket in a folder that is the same name as the branch to-be-merged, (Example: *http://my-app.s3-website-us-east-1.amazonaws.com/feature_branch_1*). This allows anyone on the team to easily review the potential changes in their browser without the need to use `npm` to compile the code. This bot makes it easy to open a PR, click the generated link, and review any changes.
+  `deploymentURL` - Base URL where builds will be deployed. In the example above this is "http://devopsmachine.com/PRs".
+  `notifyMessage` - Bot comment message. This can be formatted with any Markdown that is supported in PR comments. The text, `{{LINK}}`, with be replaced with a link to the PR build.
+  
+This app uses the [Probot](https://github.com/probot/probot) framework and [@Probot/serverless-lambda](https://github.com/probot/serverless-lambda). The production application is hosted on AWS using API Gateway/Lambda and is deployed using [Serverless](https://github.com/serverless/serverless).
 
 ## Setup
 
-1. Enable this GitHub App for your repo [here](https://github.com/apps/build-notifier).
+1. Enable build-notifier for your repo [here](https://github.com/apps/build-notifier).
 
 2. Create the file, `.github/build-notifier.yml`, in your repo.
 
-3. Copy the contents of `sample/build-notifier.yml` from this repo into the new file from step #2.
-    - Replace `deploymentURL` and `notifyMessage` with a URL and message for your app.
+3. Copy the contents of [.github/build-notifier.yml](.github/build-notifier.yml) into the new file from step #2 in your repo.
 
-That's it! You can confirm it's working by creating a pull request and waiting a moment for the bot to comment.
+4. Replace `deploymentURL` and `notifyMessage` values with a your URL and a custom message for your app.
 
-## Self-hosting
+That's it! You can confirm it's working by creating a pull request and waiting a moment for the bot to comment. 
 
-To install the app on your own server, clone this repo, then:
+## Issues/Comments
 
-```sh
-# Install dependencies
-npm install
-
-# Run the bot
-npm start
-```
-
-## Contributing
-
-If you have suggestions for how build-notifier could be improved, or want to report a bug, open an issue! We'd love all and any contributions.
-
-For more, check out the [Contributing Guide](CONTRIBUTING.md).
+If you experience any problems getting this bot working, open an issue and I'll get back with you.
 
 ## License
 
