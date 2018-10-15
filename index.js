@@ -8,7 +8,7 @@
  * a link to, `http://devopsmachine.com/PRs/add-spacing-to-navbar`,
  * would be added to the bot's comment on a PR to merge the branch,
  * `add-spacing-to-navbar`, into master. In this example, `http://dev-
- * opsmachine.com/PRs` is where all builds are being deployed, each
+ * opsmachine.com/PRs`, is where all builds are being deployed, each
  * under a seperate resource suffix matching the branch name.
  *
  * The notification message and deployment location are configured
