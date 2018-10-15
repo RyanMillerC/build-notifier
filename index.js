@@ -35,6 +35,8 @@ module.exports = app => {
     } catch (e) {
       console.log(e)
     }
+
+    let deploymentURL, notifyMessage
     try {
       const { deploymentURL, notifyMessage } = config
     } catch(e) {
