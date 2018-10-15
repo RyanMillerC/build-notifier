@@ -1,3 +1,5 @@
+//index.js
+
 module.exports = app => {
   app.on('pull_request.opened', async probotContext => {
     let config
