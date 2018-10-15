@@ -12,7 +12,7 @@
  * under a seperate resource suffix matching the branch name.
  *
  * The notification message and deployment location are configured
- * in `.github/build-notifier.yml`, on the target repo. There are
+ * in, `.github/build-notifier.yml`, on the target repo. There are
  * two values that must be set in the configuration file:
  *
  *   `deploymentURL` - Base URL where builds will be deployed. In the
