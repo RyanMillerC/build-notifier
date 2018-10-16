@@ -14,9 +14,11 @@ two values that must be set in the configuration file:
   `deploymentURL` - Base URL where builds will be deployed. In the example above this is `http://devopsmachine.com/PRs`.
   `notifyMessage` - Bot comment message. This can be formatted with any Markdown that is supported in PR comments. The text, `{{LINK}}`, with be replaced with a link to the PR build.
   
-This app uses the [Probot](https://github.com/probot/probot) framework and [@Probot/serverless-lambda](https://github.com/probot/serverless-lambda). The production application is hosted on AWS using API Gateway/Lambda and is deployed using [Serverless](https://github.com/serverless/serverless).
+This app uses the [Probot](https://github.com/probot/probot) framework and [@Probot/serverless-lambda](https://github.com/probot/serverless-lambda). The production application is hosted on [AWS](https://aws.amazon.com/) using [Lambda](https://aws.amazon.com/lambda/)/[API Gateway](https://aws.amazon.com/api-gateway/) and is deployed using [Serverless](https://github.com/serverless/serverless).
 
 ## Setup
+
+To set up build-notifier for your repo,
 
 1. Enable build-notifier for your repo [here](https://github.com/apps/build-notifier).
 
