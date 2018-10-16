@@ -31,17 +31,14 @@ module.exports = app => {
     let config
     try {
       config = await probotContext.config('build-notifier.yml')
-      console.log(config, 'config')
     } catch (e) {
-      console.log(e)
+      console.error('Unable to open ".github/build-notifier.yml".')
+      process.exit(1)
     }
 
-    let deploymentURL, notifyMessage
-    try {
-      deploymentURL = config.deploymentURL
-      notifyMessage = config.notifyMessage
-    } catch(e) {
-      console.log('Unable to pull settings from ".github/build-notifier.yml".')
+    const { deploymentURL, notifyMessage } = config
+    if (!deploymentURL || !notifyMessage) {
+      console.error('Unable to pull required settings from ".github/build-notifier.yml".')
       process.exit(1)
     }
 
