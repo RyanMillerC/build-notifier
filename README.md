@@ -6,7 +6,7 @@
 
 ## Description
 
-Build-notifier is a GitHub bot to comment on all new pull requests. Bot will comment with a predefinded message including a URL to a build of the requested PR. This assumes that all PRs are being deployed to a specific URL for testing under a resource name matching the PR branch name. For example, a link to, `http://devopsmachine.com/PRs/add-spacing-to-navbar`, would be added to the bot's comment on a PR to merge the branch, `add-spacing-to-navbar`, into master. In this example, `http://devopsmachine.com/PRs`, is where all builds are being deployed, each under a seperate resource suffix matching the branch name.
+Build-notifier is a GitHub bot to comment on all new pull requests. This bot will comment with a predefinded message including a URL to a build of the requested PR. This assumes that all PRs are being deployed to a specific URL for testing under a resource name matching the PR branch name. For example, a link to, `http://devopsmachine.com/PRs/add-spacing-to-navbar`, would be added to the bot's comment on a PR to merge the branch, `add-spacing-to-navbar`, into master. In this example, `http://devopsmachine.com/PRs`, is where all builds are being deployed, each under a seperate resource suffix matching the branch name.
 
 The notification message and deployment location are configured in, `.github/build-notifier.yml`, on the target repo. There are
 two values that must be set in the configuration file:
