@@ -38,7 +38,8 @@ module.exports = app => {
 
     let deploymentURL, notifyMessage
     try {
-      const { deploymentURL, notifyMessage } = config
+      deploymentURL = config.deploymentURL
+      notifyMessage = config.notifyMessage
     } catch(e) {
       console.log('Unable to pull settings from ".github/build-notifier.yml".')
       process.exit(1)
