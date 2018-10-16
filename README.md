@@ -1,5 +1,9 @@
 # build-notifier :robot: 
 
+[![Travis (.org)](https://img.shields.io/travis/RyanMillerC/build-notifier.svg)](https://travis-ci.org/RyanMillerC/build-notifier)
+[![GitHub](https://img.shields.io/github/license/RyanMillerC/build-notifier.svg)](https://github.com/RyanMillerC/build-notifier/blob/master/LICENSE)
+[![Made with Probot](https://img.shields.io/badge/Made%20with-Probot-blue.svg)](https://github.com/probot/probot)
+
 > GitHub bot will comment on new pull requests with a link to a live demo of the requested PR. It is available [here](https://github.com/apps/build-notifier).
 
 ![Screenshot](https://ryanmillerc.github.io/build-notifier/screenshot.png)
