@@ -6,7 +6,7 @@
 
 > GitHub bot will comment on new pull requests with a link to a live demo of the requested PR. It is available [here](https://github.com/apps/build-notifier).
 
-![Screenshot](/docs/screenshot.png)
+![Screenshot](/docs/build-notifier-screenshot.png)
 
 ## Description
 
